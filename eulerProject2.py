@@ -2,6 +2,14 @@
 
 firstNumber = 1 ;
 secondNumber = 1 ;
-thirdNumber = None ;
+thirdNumber = 1 ;
 
-print(firstNumber, secondNumber, thirdNumber);
+
+while (thirdNumber<40):
+    
+        print(thirdNumber, " ,")
+        thirdNumber = firstNumber + secondNumber;
+        firstNumber = secondNumber;
+        secondNumber = thirdNumber;
+        
+        
