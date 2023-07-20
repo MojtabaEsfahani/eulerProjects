@@ -12,5 +12,4 @@ def fElements(max):
         
     return secondNumber
 
-print (fElements(40))        
-        
+print (fElements(40)) 
