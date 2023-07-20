@@ -6,11 +6,11 @@ def fElements(max):
     thirdNumber = 1 ;
 
     while (thirdNumber<max):
-    
-        print(thirdNumber, " ,")
         thirdNumber = firstNumber + secondNumber;
         firstNumber = secondNumber;
         secondNumber = thirdNumber;
+        
+    return secondNumber
 
-fElements(40)        
+print (fElements(40))        
         
