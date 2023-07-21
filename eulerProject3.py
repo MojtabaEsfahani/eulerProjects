@@ -12,7 +12,6 @@ try:
     factors_list = [];
     multiplication = 1;
     os.system('cls');
-
     number=input("\nEnter an Integer Number : ");
     number=int(number);
     print ("\nThe factors of", number, "are :");
@@ -23,7 +22,4 @@ try:
     print (factors_list);
     print ("\nand The largest Factor is :", last_factor, "\n");
 except:
-    print("Something Went Wrong !!!");
-    
-
-    # 600851475143
+    print("Something Went Wrong !!!")
