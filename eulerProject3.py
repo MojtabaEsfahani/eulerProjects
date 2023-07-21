@@ -16,8 +16,8 @@ try:
     print ("The factors of", number, "are :\n\n");
     dividend = number;
     while(Mal!=number):
-        Max, dividend = factors(number, dividend);
-        Mal *= Max
+        last_factor, dividend = factors(number, dividend);
+        Mal *= last_factor
 except:
     print("Something Went Wrong !!!");
     
