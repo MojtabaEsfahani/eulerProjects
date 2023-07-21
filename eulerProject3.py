@@ -5,21 +5,25 @@ def factors(number, dividend):
     for integer in range(min, number+1):
         if(dividend%integer==0):            
             dividend = dividend/integer;
-            print (integer, " ,", sep="");
+            factors_list.append(integer);
             return integer, dividend;
 
 try:
-    Mal = 1;
+    factors_list = [];
+    multiplication = 1;
     os.system('cls');
+
     number=input("\nEnter an Integer Number : ");
     number=int(number);
-    print ("The factors of", number, "are :\n\n");
+    print ("\nThe factors of", number, "are :");
     dividend = number;
-    while(Mal!=number):
+    while(multiplication != number):
         last_factor, dividend = factors(number, dividend);
-        Mal *= last_factor
+        multiplication *= last_factor
+    print (factors_list);
+    print ("\nand The largest Factor is :", last_factor, "\n");
 except:
     print("Something Went Wrong !!!");
     
-    
+
     # 600851475143
