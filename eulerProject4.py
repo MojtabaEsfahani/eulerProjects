@@ -20,10 +20,13 @@ def reverse (int_number):
 
 os.system ('cls');
 try:
-    min = int(input("Enter a min range :"));
-    max = int(input("Enter a max range :"));
+    min = int(input("Enter an integer min range :"));
+    max = int(input("Enter an integer max range (greater than {}) :".format(min)));
     answer = pali_numbers (min, max).split('*');
-    print ("The maximum palindromic number between {} and {} is :".format(min, max))
-    print ("{} * {} = {}".format(answer[0], answer[1], answer[2]));
+    if (answer[0] == ""):
+        print ("There is no palindromic number between {} and {} is :".format(min, max))
+    else:
+        print ("The maximum palindromic number between {} and {} is :".format(min, max))
+        print ("{} * {} = {}".format(answer[0], answer[1], answer[2]));
 except:
     print ("something went wrong !!!")
