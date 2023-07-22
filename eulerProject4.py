@@ -1,17 +1,25 @@
+import os
 #generate palindromic numbers
-def pali_numbers():
-    for x in range(min_x, 100):
-        for y in range(min_y + 1, 100):
-            mul = x*y;
-            String = str(mul);
-            re_String = String[::-1];
-            if (String==re_String):
-                return String, x, y;
-    loop = False;
-            
-loop = True;
-min_x = 10;
-min_y = 10;
-while (loop):
-    pali_number, min_x, min_y = pali_numbers();
-    print ("{} * {} = ".format(min_x, min_y), pali_number);
+def pali_numbers (min, max):
+    com = 0;
+    return_packet =""
+    for first_number in range (min, max):
+        for second_number in range (min, max):
+            mul = first_number*second_number;
+            if (mul == reverse(mul) and mul > com):
+                com = mul;
+                
+    return ;
+
+
+def reverse (int_number):
+    String = str (int_number);
+    re_String = String [::-1];
+    return int (re_String);
+
+
+os.system ('cls');
+min = int(input("Enter a min range"));
+max = int(input("Enter a max range"));
+first_number, second_number, com = pali_numbers (min, max);
+print ("{} * {} = {}".format(first_number, second_number, com));
