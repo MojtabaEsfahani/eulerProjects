@@ -11,7 +11,7 @@ def pali_numbers (min, max):
                 return_packet = "{}*{}*{}".format(str(first_number), str(second_number), str(max_pali));
     return return_packet;
 
-
+#return reverse of number
 def reverse (int_number):
     String = str (int_number);
     re_String = String [::-1];
