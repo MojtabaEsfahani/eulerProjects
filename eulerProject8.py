@@ -26,11 +26,20 @@ def rem_space(strList):
         CNumbers_Str += i
     return CNumbers_Str
 
-def proccessing(numbersStr):
-    pass
-
+def processing(numbersStr):
+    goalStr = numbersStr[0:13:1]
+    print (len(numbersStr))
+    for i in range(0, len(numbersStr)+1):
+        fNumber = goalStr[0:1:1]
+        nNumber = numbersStr[13+i:14+i:1]
+        if(int(nNumber)>=int(fNumber)):
+            goalStr = goalStr[1:13:1]+nNumber
+    return goalStr
+            
 Numbers_Str = rem_space(Numbers_Str.split('\n'))
-proccessing(Numbers_Str)
+print (len(Numbers_Str))
+Ans = processing(Numbers_Str)
+print (Ans)
 # INT = Numbers_Str[0:13:1]
 # X = 0
 # for i in INT:
