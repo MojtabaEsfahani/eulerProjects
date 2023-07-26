@@ -28,7 +28,7 @@ def rem_space(strList):
 
 def processing(numbersStr):
     goalStr = numbersStr[0:13:1]
-    print (len(numbersStr))
+    print (numbersStr)
     for i in range(0, len(numbersStr)+1):
         fNumber = goalStr[0:1:1]
         nNumber = numbersStr[13+i:14+i:1]
@@ -39,6 +39,7 @@ def processing(numbersStr):
 Numbers_Str = rem_space(Numbers_Str.split('\n'))
 print (len(Numbers_Str))
 Ans = processing(Numbers_Str)
+# processing(Numbers_Str)
 print (Ans)
 # INT = Numbers_Str[0:13:1]
 # X = 0
