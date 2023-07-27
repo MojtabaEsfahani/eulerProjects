@@ -10,7 +10,9 @@ def prime_number(numbers):
         if(bul):
             pList.append(number)
         number+=1
-    print (pList[-1], "\n", len(pList))
+    print (pList[-1], "\n")
 
     
 prime_number(10001)
+
+# 104743
