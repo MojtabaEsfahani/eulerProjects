@@ -28,19 +28,6 @@ def rem_space(strList):
         CNumbers_Str += i
     return CNumbers_Str
 
-# def processing(numbersStr):
-#     goalStr = numbersStr[0:13:1]
-#     for i in range(0, len(numbersStr)-100):
-#         fNumber = goalStr[0:1:1]
-#         nNumber = numbersStr[13+i:14+i:1]
-#         if(int(nNumber)>=int(fNumber)):
-#             goalStr = goalStr[1:13:1]+nNumber
-#     return goalStr
-#     return goalStr
-#     return goalStr
-
-
-
 
 def processing(numbersStr):
     lmul = 1
@@ -58,3 +45,5 @@ def processing(numbersStr):
 Numbers_Str = rem_space(Numbers_Str.split('\n'))
 Ans = processing(Numbers_Str)
 print (Ans)
+
+# 23514624000
