@@ -10,3 +10,4 @@ os.system ('cls')
 Ans = generator()
 print ("There exists exactly one Pythagorean triplet for which :\n a+b+c=1000")
 print ("the product abc is : {}".format(Ans))
+# 31875000
