@@ -34,4 +34,6 @@ def list_maker(s_number):
     return main_list
     
 s_number = split(s_number)
-list_maker(s_number)
+main_list = list_maker(s_number)
+
+print (main_list)
