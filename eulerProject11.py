@@ -59,21 +59,34 @@ def up_down(s_number):
 
 def diag_ltr(s_number):
     max = 0
-    for i in range(0, 20):
+    for i in range(0, 17):
         for j in range(0, 17):
             mul = 1
             p = 0
             for k in range(j, j+4):
-                cap = s_number[k+p][i+p]
-                # mul *= s_number[k+p][i+p]
-                mul *= cap
+                mul *= s_number[k][i+p]
                 p +=1
             if(mul>max and j<17):
                 max = mul;
     # print (max)
+    
+def diag_rtl(s_number):
+    s_number = s_number[::-1]
+    max = 0
+    for i in range(0, 17):
+        for j in range(0, 17):
+            mul = 1
+            p = 0
+            for k in range(j, j+4):
+                mul *= s_number[k][i+p]
+                p +=1
+            if(mul>max and j<17):
+                max = mul;
+    print (max)
 
 s_number = split(s_number)
 s_number = list_maker(s_number)
 right_left(s_number)
 up_down(s_number)
 diag_ltr(s_number)
+diag_rtl(s_number)
