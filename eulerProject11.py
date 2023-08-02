@@ -20,6 +20,8 @@ s_number = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"""
 
 
+
+
 def split(string):
     s_list = string.split('\n')
     return s_list 
@@ -30,10 +32,14 @@ def list_maker(s_number):
         rel=[]
         for j in i.split(' '):
             rel.append(int(j))
-        main_list.append(rel)
+            main_list.append(rel)
     return main_list
-    
-s_number = split(s_number)
-main_list = list_maker(s_number)
 
-print (main_list)
+def right_left(s_number):
+    print(s_number[0][0])
+    for i,j in s_number:
+        
+
+s_number = split(s_number)
+s_number = list_maker(s_number)
+right_left(s_number)
