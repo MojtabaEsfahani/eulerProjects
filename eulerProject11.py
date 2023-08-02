@@ -44,6 +44,22 @@ def right_left(s_number):
                 mul *= i[k]
             if(mul>max and j<17):
                 max = mul;
+    # print (max)
+    
+def up_down(s_number):
+    max = 0
+    for j in range(0, 1):
+        for i in s_number:
+            mul = 1
+            print (i[j])
+            
+            
+            
+            
+            # for k in range(j, j+4):
+            #     mul *= i[k]
+            # if(mul>max and j<17):
+            #     max = mul;
     print (max)
 
 s_number = split(s_number)
