@@ -36,9 +36,15 @@ def list_maker(s_number):
     return main_list
 
 def right_left(s_number):
-    print(s_number[0][0])
-    for i,j in s_number:
-        
+    max = 0
+    for i in s_number:
+        for j in range(0, 17):
+            mul = 1
+            for k in range(j, j+4):
+                mul *= i[k]
+            if(mul>max and j<17):
+                max = mul;
+    print (max)
 
 s_number = split(s_number)
 s_number = list_maker(s_number)
