@@ -32,7 +32,7 @@ def list_maker(s_number):
         rel=[]
         for j in i.split(' '):
             rel.append(int(j))
-            main_list.append(rel)
+        main_list.append(rel)
     return main_list
 
 def right_left(s_number):
@@ -51,13 +51,13 @@ def up_down(s_number):
     for j in range(0, 1):
         for i in s_number:
             mul = 1
-            print (i[j])
+            print (i)
             
             
             
-            
-            # for k in range(j, j+4):
-            #     mul *= i[k]
+
+            for k in range(j, j+4):
+                mul *= i[k]
             # if(mul>max and j<17):
             #     max = mul;
     print (max)
@@ -65,3 +65,4 @@ def up_down(s_number):
 s_number = split(s_number)
 s_number = list_maker(s_number)
 right_left(s_number)
+up_down(s_number)
