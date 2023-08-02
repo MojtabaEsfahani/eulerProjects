@@ -48,21 +48,32 @@ def right_left(s_number):
     
 def up_down(s_number):
     max = 0
-    for j in range(0, 1):
-        for i in s_number:
+    for i in range(0, 20):
+        for j in range(0, 17):
             mul = 1
-            print (i)
-            
-            
-            
-
             for k in range(j, j+4):
-                mul *= i[k]
-            # if(mul>max and j<17):
-            #     max = mul;
-    print (max)
+                mul *= s_number[k][i]
+            if(mul>max and j<17):
+                max = mul;
+    # print (max)
+
+def diag_ltr(s_number):
+    max = 0
+    for i in range(0, 20):
+        for j in range(0, 17):
+            mul = 1
+            p = 0
+            for k in range(j, j+4):
+                cap = s_number[k+p][i+p]
+                # mul *= s_number[k+p][i+p]
+                mul *= cap
+                p +=1
+            if(mul>max and j<17):
+                max = mul;
+    # print (max)
 
 s_number = split(s_number)
 s_number = list_maker(s_number)
 right_left(s_number)
 up_down(s_number)
+diag_ltr(s_number)
