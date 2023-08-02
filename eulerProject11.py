@@ -1,3 +1,5 @@
+# dev needed (M_func, Alg)
+
 s_number = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
@@ -44,7 +46,7 @@ def right_left(s_number):
                 mul *= i[k]
             if(mul>max and j<17):
                 max = mul;
-    # print (max)
+    return max
     
 def up_down(s_number):
     max = 0
@@ -55,7 +57,7 @@ def up_down(s_number):
                 mul *= s_number[k][i]
             if(mul>max and j<17):
                 max = mul;
-    # print (max)
+    return max
 
 def diag_ltr(s_number):
     max = 0
@@ -68,7 +70,7 @@ def diag_ltr(s_number):
                 p +=1
             if(mul>max and j<17):
                 max = mul;
-    # print (max)
+    return max
     
 def diag_rtl(s_number):
     s_number = s_number[::-1]
@@ -82,11 +84,15 @@ def diag_rtl(s_number):
                 p +=1
             if(mul>max and j<17):
                 max = mul;
-    print (max)
+    return max
 
 s_number = split(s_number)
 s_number = list_maker(s_number)
-right_left(s_number)
-up_down(s_number)
-diag_ltr(s_number)
-diag_rtl(s_number)
+Ans = []
+max = right_left(s_number)
+max = up_down(s_number)
+max = diag_ltr(s_number)
+max = diag_rtl(s_number)
+print (max)
+
+# 70600674
