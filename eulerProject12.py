@@ -2,7 +2,7 @@
 
 def tri_num(n):
     sequence = []
-    for i in range(1, n+1):
+    for i in range(10000, n+1):
         tri_number = (i*(i+1))/2
         tri_number = int(tri_number)
         sequence.append(tri_number)
@@ -10,15 +10,21 @@ def tri_num(n):
 
 def calc(sequence):
     for i in sequence:
-        factors = []
-        for j in range(min, i+1):
+        # factors = []
+        t = 0
+        for j in range(1, i+1):
             if(i%j == 0):
-                factors.append(j)
-        if(len(factors) > 5):
-            print (factors)
-            return 
+                # factors.append(j)
+                t += 1
+        # if(len(factors) > 200):
+        if(t > 300):
+            # print (factors)
+            # print (len(factors))
+            print (i ,"\n", t)
+            # return 
+        # print (i ,"\n", t)
         
-sequence = tri_num(5)
+sequence = tri_num(11000)
 calc(sequence)
 
 
