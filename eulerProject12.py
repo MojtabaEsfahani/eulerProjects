@@ -18,8 +18,8 @@ def calc(sequence):
             print (factors)
             return 
         
-# for i in range(1, 10):
-#     sequence.append(tri_num(i))
 sequence = tri_num(5)
-# calc(sequence)
-print (sequence)
+calc(sequence)
+
+
+# print (sequence)
