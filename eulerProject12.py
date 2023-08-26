@@ -1,19 +1,20 @@
-
-def hash_divisors(n):
-    sqrt_n = int(math.sqrt(n));
+import math
+def hash_divisors(number):
+    sqrt_number = int(math.sqrt(number));
     t = 1;
-    for i in range(1, sqrt_n+1):
-        if n % i == 0:
+    for i in range(1, sqrt_number+1):
+        if number % i == 0:
             t += 1;
-            if i != n/i:
+            if i != number/i:
                 t += 1;
-    
-    if t >= 500:
-        print(n);
+    if t>=500 :
+        print (number," is the Answer", sep="")
+        return False;
+    else :
+        return True;
 
 
-number = 1;
-for i in range(2, 10000000000):
-    number +=i;
-    hash_divisors(number);
+number =1;
+while (hash_divisors(number)):
+    number +=1;
     
