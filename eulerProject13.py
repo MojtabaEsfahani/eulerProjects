@@ -1,3 +1,5 @@
+import math
+
 num = """37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538
 74324986199524741059474233309513058123726617309629
@@ -106,8 +108,15 @@ for i in num.split('\n'):
 # checkpoint ( split the big str_num sep=(\n) )
 # print (len(number_lines))
 
-sum = 0
+sum = ""
+rest = 0
 for j in range(1,51):
+    Ans = rest
     for i in number_lines:
-        sum += int(i[-j])
-    print (sum)
+        Ans += int(i[-j])
+    print (Ans)
+    sum += str(Ans%10)
+    rest = math.floor(Ans/10)
+    
+print (len(sum))
+    
