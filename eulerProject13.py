@@ -114,9 +114,9 @@ for j in range(1,51):
     Ans = rest
     for i in number_lines:
         Ans += int(i[-j])
-    print (Ans)
     sum += str(Ans%10)
     rest = math.floor(Ans/10)
-    
-print (len(sum))
+sum += str(math.floor(Ans/10))
+sum = sum[::-1]
+print(sum)
     
