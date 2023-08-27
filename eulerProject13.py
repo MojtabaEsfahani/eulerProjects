@@ -101,22 +101,31 @@ num = """37107287533902102798797998220837590246510135740250
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690"""
 
-number_lines = []
-for i in num.split('\n'):
-    number_lines.append(i)
+def separator(string ,s):
+    number_lines = []
+    for i in string.split(s):
+        number_lines.append(i)
+    return number_lines
 
+
+def summation(number_lines):
+    sum = ""
+    rest = 0
+    for j in range(1,51):
+        Ans = rest
+        for i in number_lines:
+            Ans += int(i[-j])
+        sum += str(Ans%10)
+        rest = math.floor(Ans/10)
+    sum += str(math.floor(Ans/10))
+    sum = sum[::-1]
+    return sum
+
+
+number_lines = separator(num, '\n')
 # checkpoint ( split the big str_num sep=(\n) )
 # print (len(number_lines))
 
-sum = ""
-rest = 0
-for j in range(1,51):
-    Ans = rest
-    for i in number_lines:
-        Ans += int(i[-j])
-    sum += str(Ans%10)
-    rest = math.floor(Ans/10)
-sum += str(math.floor(Ans/10))
-sum = sum[::-1]
+sum = summation(number_lines)
 print(sum)
     
