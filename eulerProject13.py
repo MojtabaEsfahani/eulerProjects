@@ -1,4 +1,3 @@
-import math
 
 num = """37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538
@@ -101,6 +100,9 @@ num = """37107287533902102798797998220837590246510135740250
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690"""
 
+
+import math
+
 def separator(string ,s):
     number_lines = []
     for i in string.split(s):
@@ -127,5 +129,5 @@ number_lines = separator(num, '\n')
 # print (len(number_lines))
 
 sum = summation(number_lines)
-print(sum)
+print("\nsummation of lines is :\n", sum ,sep='')
     
