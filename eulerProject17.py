@@ -9,4 +9,4 @@ for i in range(1, 1001):
         else:
             counter +=1
             
-print(counter)
+print(counter, " letters would be used from one to one thousand", sep ='')
