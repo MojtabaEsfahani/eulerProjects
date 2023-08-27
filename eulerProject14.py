@@ -1,5 +1,3 @@
-# product Collatz Sequence and return length of chain
-
 def collatz_seq(start_number):
     seq = [start_number]
     while(True):
@@ -14,7 +12,6 @@ def collatz_seq(start_number):
 max = 0
 st_num = 1
 for i in range(1, 1000000):
-    print(i)
     chain_len, start_number = collatz_seq(i)
     if (chain_len > max):
         max = chain_len
