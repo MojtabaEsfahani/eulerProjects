@@ -1,3 +1,7 @@
+# Bad Algorithm
+# [Done] exited with code=0 in 23.255 seconds
+
+
 def collatz_seq(start_number):
     seq = [start_number]
     while(True):
