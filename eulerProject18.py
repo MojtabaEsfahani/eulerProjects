@@ -24,29 +24,18 @@ def sep (string):
         arra.append(kp)
     return arra
 
+def func(arra):
+    pic = []
+    for i in range(0, 3):
+        pic.append(arra[i])        
+    arra.pop(0)
+    arra.pop(0)
+    return arra, pic
 
 arra = sep (numbers)
-p = 0
-l = 0
-max = 0
-for j in range(0, 15):
+while(len(arra) > 3):
+    arra, pic = func(arra)
     sum_1 = 0
     sum_2 = 0
-    sum_3 = 0
-    for i in arra :
-        sum_1 += i[0+l]
-        sum_2 += i[(-1-p)]
-        if (sum_1 == sum_2):
-            max += i[(-1-p)]
-    if (sum_1 >= sum_2):
-        print("1")
-        p += 1
-        arra.pop(0)
+    for i in pic:
         
-    else :
-        print("2")
-        l += 1
-        arra.pop(0)
-
-
-print (max)
