@@ -33,7 +33,7 @@ def func(arra):
     return arra, pic
 
 def func_2(nums):
-    nums.sort()            
+    
     return nums[-1]
 
 
@@ -43,9 +43,12 @@ while(len(arra) > 3):
     arra, pic = func(arra)
     ans = [0]*4
     for i in pic:
-        ans[0]+=i[0]
-        ans[1]+=i[-1]
-        if (len(i)==3):
-            ans[2]=ans[0]+i[1]            
-            ans[3]=ans[1]+i[1]            
-    sum+=func_2(ans)
+        if (len(i)== 1 or len(i)== 2):
+            ans[0]+=i[0]
+            ans[3]+=i[-1]
+        else:
+            ans[1] =   ans[0]+i[1]
+            ans[2] =   ans[3]+i[1]
+            ans[0] +=  i[0]
+            ans[3] +=  i[-1]
+            
