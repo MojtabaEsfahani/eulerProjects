@@ -32,11 +32,12 @@ max = 0
 for j in range(0, 15):
     sum_1 = 0
     sum_2 = 0
+    sum_3 = 0
     for i in arra :
         sum_1 += i[0+l]
         sum_2 += i[(-1-p)]
         if (sum_1 == sum_2):
-            max += sum_1
+            max += i[(-1-p)]
     if (sum_1 >= sum_2):
         print("1")
         p += 1
