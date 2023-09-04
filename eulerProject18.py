@@ -32,10 +32,20 @@ def func(arra):
     arra.pop(0)
     return arra, pic
 
+def func_2(nums):
+    nums.sort()            
+    return nums[-1]
+
+
 arra = sep (numbers)
+sum = 0
 while(len(arra) > 3):
     arra, pic = func(arra)
-    sum_1 = 0
-    sum_2 = 0
+    ans = [0]*4
     for i in pic:
-        
+        ans[0]+=i[0]
+        ans[1]+=i[-1]
+        if (len(i)==3):
+            ans[2]=ans[0]+i[1]            
+            ans[3]=ans[1]+i[1]            
+    sum+=func_2(ans)
